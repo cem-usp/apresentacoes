@@ -1,4 +1,4 @@
-# Apresentações da Área de TRansferência do CEM
+# Apresentações da Área de Transferência do CEM
 
 Repositório baseado em [reveal.js](https://revealjs.com/) para planejar e hospedar apresentações dos desenvolvedores e técnicos da área de transferênciai do CEM
 
@@ -6,7 +6,7 @@ Repositório baseado em [reveal.js](https://revealjs.com/) para planejar e hospe
 
 reveal.js é um _framework_ de apresentação HTML de código aberto. Ele permite que qualquer pessoa com um navegador da Web crie apresentações com um padrão visual agradável por linha de código, que é tudo que, nós, desenvolvedores do CEM, gostamos de fazer.
 
-Esperamos assim padronizar um meio de criar, persisitir e organiziar nossas apresentações de forma análoga com o desenvolvimento dos projetos na equipe.
+Esperamos assim padronizar um meio de criar, persisitir e organizar nossas apresentações de forma análoga com o desenvolvimento dos projetos na equipe.
 
 ## Padronização e método
 
