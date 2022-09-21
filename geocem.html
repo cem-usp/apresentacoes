@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/cem.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+		  <div class="slides">
+		    <a href="https://centrodametropole.fflch.usp.br/">
+		    				<img src="midia/apresentacao-cem-interscity/geocem/logo_cem-hd.jpg" alt="reveal.js logo" style="float:right;">
+		    			</a>
+			  <section><p>SISTEMA DE GESTÃO E PUBLICAÇÃO DE BASES CARTOGRÁFICAS</p>
+			    <p>GEOCEM</p>
+			    <p>
+						<small><a href="https://centrodametropole.fflch.usp.br/">https://centrodametropole.fflch.usp.br/</a></small>
+					</p>
+			  </section>
+			  <section>
+			    <h3>GeoCEM</h3>
+			    <img src="midia/apresentacao-cem-interscity/geocem/mot.png" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
+					<ul>
+					  <li><span class="fragment highlight-red">Serviços</span>: WFS,WMS, WCS, WMTS, WPS</li>		
+					  <li>Casos de uso</li>
+					  <li>Sistema web baseado no arcabouço do Geonode.</li>	  
+					  <li>Visualizar as bases cartográficas com seus metadados e dicionários.
+</li>
+					</ul>
+			  </section>
+			  <section>
+			    <h3>Detalhes técnicos:</br> Arquitetura GeoCEM</h3>
+
+			      <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/geocem/gn_architecture.png" style="margin: 0 auto 4rem auto; background: transparent;">
+			      <!-- more Elements -->
+			      </div>
+
+			    <div id="right">
+			      <ul class = "r-fit-text">
+					  <li>Serviços: WFS,WMS, WCS, WMTS, WPS</li>		
+					  <li>Casos de uso</li>
+					  <li>Sistema web baseado no arcabouço do Geonode.</li>	  
+					  <li>Visualizar as bases cartográficas com seus metadados e dicionários.
+</li>
+					</ul>
+			      <!-- more Elements -->
+			    </div>
+			  
+			  </section>
+
+			  <section>
+			    <h2>Índice</h2>
+					<ul>
+					  <li>Acerca do GeoCEM</li>
+					  <ul><li>Arquitetura, configuração.</li></ul>
+						<li>Casos de uso</li>
+					  <li>Página web</li>
+					  <ul>
+					    <li>Estrutura</li>
+					    <li>Características e funções</li>
+					  </ul>
+						<li>Trabalhos futuros</li>
+					</ul>
+			  </section>
+			  <section>
+			    <h4> Detalhes técnicos:</br> Configuração GeoCEM [.env] </h4>
+			    <p class = "r-fit-text">O arquivo de configuração .env permite alterar parâmetros dos programas instalados como postgres, geoserver, java, jenkins, nginx, controle de acesso, cliente Gis, monitoramento.
+			    </p>
+			    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+			    SITEURL=http://200.144.244.238/
+			    ALLOWED_HOSTS=[‘django’,]
+
+			    LANGUAGE_CODE=pt
+			    LANGUAGES=((‘pt’,‘Portuguese’),(‘en’,‘English’))
+
+			    GEONODE_INSTANCE_NAME=geonode
+			    DJANGO_SETTINGS_MODULE=geocem.settings
+			    UWSGI_CMD=uwsgi--ini/usr/src/geocem/uwsgi.ini
+
+			    # #################
+			    # backend
+			    # #################
+			    POSTGRES_USER=postgres
+			    POSTGRES_PASSWORD=postgres
+			    GEONODE_DATABSE=geocem
+			    GEONODE_DATABASE_PASSWORD=geonode
+			    GEONODE_GEODATABASE=geocem_data
+			    GEONODE_GEODATABASE_PASSWORD=geonode
+			    GEONODE_DATABASE_SCHEMA=public
+			    DATABASE_HOST=db
+			    DATABASE_PORT=5432
+			    DATABASE_URL=postgis://geocem:geonode@db:5432/geocem
+			    GEODATABASE_URL=postgis://geocem_data:geonode@db:5432/geocem_data
+			    GEONODE_DB_CONN_MAX_AGE=0
+			    GEONODE_DB_CONN_TOUT=5
+			    DEFAULT_BACKEND_DATASTORE=datastore
+			    BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+			    ASYNC_SIGNALS=True
+
+			    # #################
+			    # geoserver
+			    # #################
+			    GEOSERVER_WEB_UI_LOCATION=http://200.144.244.238/geoserver/
+			    GEOSERVER_PUBLIC_LOCATION=http://200.144.244.238/geoserver/
+			    GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
+			    GEOSERVER_ADMIN_USER=admin
+		            </code>
+			    </pre>
+			  </section>
+			  <section>
+			    <h3>Diagrama de sequência: </h3>
+                            <h4>Registrar base cartográfica</h4>
+			    </br>
+			    <img src="midia/apresentacao-cem-interscity/geocem/GeoCEM_criar_camada.png" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;">
+			  </section>
+			  
+			  <section>
+			    <h4> Usuário CEM</h4>
+			    <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/geocem/login.png" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;">
+			    </div>
+			    <div id="right">
+			    <ul >
+					  <li>Acesso para ingressar no sistema como utilizador do CEM:</li>
+					  <ol><li>Abrir opção de Login</li>
+					    <li>Conta de usuario</li>
+					    <li>Senha.</li>				    
+					  </ol>					
+			    </ul>
+			    </div>
+			     </section>
+			    <section>
+			      <h4> Usuário CEM</h4>
+			      <p>Painel com várias opções para um utilizador do CEM
+			      :</p>
+			      </br>
+			    <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/geocem/admin_django_gs.png" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;">
+			    </div>
+			    <div id="right">
+			    <ul >					 
+					  <ol><li>Administrador do Django</li>
+					    <li>Administrador do Geoserver</li>		    
+					  </ol>					
+			    </ul>
+			    </div>
+			    </section>
+			    <section>
+			      <h4> Usuário CEM</h4>
+			      <p>Opções adicionais
+			      :</p>
+			      </br>
+			    <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/geocem/optionadmin.png" style=" margin: 0 auto 4rem auto; background: transparent;">
+			    </div>
+			    <div id="right">
+			    <ul >					 
+					  <ol><li>Carregar uma camada de mapa</li>
+					    <li>Carregar documentos</li>
+					    <li>Criar mapa a partir de camadas de mapas</li>
+					  </ol>					
+			    </ul>
+			    </div>
+			    </section>
+			    <section>
+			      <section >
+				<h4 > Usuário CEM</h4>				     
+				<img src="midia/apresentacao-cem-interscity/geocem/uploadlayer.png" style=" height=180pn;margin: 0 auto 4rem auto; background: transparent;">
+				
+				<ul class = "r-fit-text">					 
+				  <ol><li>Escolher os arquivos em formato .zip ou os 4 arquivos com essas extensões .shp, .prj, .dbf, .shx </li>
+				    <li>Escolher o tipo de caracteres para a base cartográfica.</li>
+				    <li>Criar a camada de mapa.</li>
+				    <li>Editar metadados.</li>
+				  </ol>					
+				</ul>
+				
+			      </section>
+			      <section>
+				<h4> Usuário CEM</h4>				     
+				<img src="midia/apresentacao-cem-interscity/geocem/uploadlayer2.png" style=" margin: 0 auto 4rem auto; background: transparent;">	 
+				
+			      </section>
+			    </section>
+			    <section>
+				<h4>Usuário</h4>				     
+				<img src="midia/apresentacao-cem-interscity/geocem/advanced_search.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">	 
+								 
+				  <ol><li>Temas das bases cartográficas
+</li>
+				    <li>Resumo das bases cartográficas
+</li>				  
+				  </ol>					
+			
+			    </section>
+			    <section>
+			    <section>
+			    <h3>Diagrama de sequência: </h3>
+                            <h4>Criar mapa a partir de camada</h4>
+			    </br>
+			    <img src="midia/apresentacao-cem-interscity/geocem/GeoCEM_criar_mapa.png" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;">
+			    </section>
+			     <section>
+			       <h4>Usuário CEM</h4>
+			       <h4>Criar mapa</h4>
+				<img src="midia/apresentacao-cem-interscity/geocem/advanced_search.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">	 
+								 
+				  <ol><li>Selecionar camada.
+
+</li>
+				    <li>Criar mapa
+</li>				  
+				  </ol>								
+			     </section>
+			     <section>
+			       <h4>Usuário</h4>
+				<img src="midia/apresentacao-cem-interscity/geocem/mapa.svg" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+			    </section>
+			    </section>
+			      <section>
+			       <h4><p>Front-end [Página inicial]:</br> Estrutura</p></h4>
+				<img src="midia/apresentacao-cem-interscity/geocem/home.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+			      </section>
+			       <section>
+			       <h4>Front-end [Busca avançada]:</br> Estrutura</h4>
+				<img src="midia/apresentacao-cem-interscity/geocem/page-adv.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+			       </section>
+			       <section>
+				 <h4>Trabalhos Futuros</h4>
+				  <ul>
+					  <li>Criar mapas a partir da junção das bases cartográficas disponíveis.
+</li>		
+					  <li>GeoCEM + CKAN
+</li>
+					</ul>
+			       </section>
+			       <section>
+			       <h4>Detalhe técnico do servidor requerido:</h4>
+				  <ul>
+				    <li>Novo servidor Conta 1 internuvem.</li>
+				    <ul>
+					  <li>HD: 500GB
+					  </li>
+					  <li>8 CPU </li>
+					  <li>16 RAM</li>
+				    </ul>
+				   </ul>
+			       </section>
+			
+			    
+				<!-- <section data-background="midia/apresentacao-cem-interscity/geocem/GeoCEM_criar_mapa.png" data-background-size="1000px">Slide 2 -->
+				<!-- 		<aside class="notes"> -->
+				<!-- 		<p>Some notes</p> -->
+				<!-- 		</aside> -->
+				<!-- 		<p>Some slide text</p> -->
+				<!-- 		<aside class="notes"> -->
+				<!-- 		<p>and some more notes</p> -->
+				<!-- 	</aside> -->
+				<!-- </section> -->
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
