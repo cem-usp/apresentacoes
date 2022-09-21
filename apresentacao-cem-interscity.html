@@ -1,48 +1,225 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>Slide 2
+				<aside class="notes">
+					<p>Some notes</p>
+				</aside>
+				<p>Some slide text</p>
+				<aside class="notes">
+					<p>and some more notes</p>
+				</aside>
+			</section>
+			<!-- ESCOLAS -->
+			<section>
+				<h2>Escolas da RMSP</h2>
+				<div class="flex-container">
+					<div>
+						<img src="midia/apresentacao-cem-interscity/escolas/escolas.gif" alt="">
+					</div>
+					<div>
+						<h2 class="kaue-header">Mapa Interativo das Escolas da RMSP</h2>
+						<ul class="kaue-p">
+							<li>Dados sobre as escolas</li>
+							<li>Dados sociodemográficos contextuais</li>
+						</ul>
+						<h2 class="kaue-header" style="margin-top: 10px;">Motivação</h2>
+						<ul class="kaue-p">
+							<li>Web mapping</li>
+							<li>Consulta <b>eficiente</b> de grandes volumes de dados</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h1>MEAN Stack</h1>
+				<div class="flex-container-center" style="background-color: white;">
+					<div style="width: 22%;"><img src="midia/apresentacao-cem-interscity/escolas/mongodb.png" alt="">
+					</div>
+					<div class="vl"></div>
+					<div style="width: 22%;"><img src="midia/apresentacao-cem-interscity/escolas/expressjs.png" alt="">
+					</div>
+					<div class="vl"></div>
+					<div style="width: 22%;"><img src="midia/apresentacao-cem-interscity/escolas/angular.png" alt="">
+					</div>
+					<div class="vl"></div>
+					<div style="width: 22%;"><img src="midia/apresentacao-cem-interscity/escolas/nodejs.png" alt="">
+					</div>
+				</div>
+			</section>
+			<section>
+				<h1>Arquitetura</h1>
+				<img src="midia/apresentacao-cem-interscity/escolas/arquitetura.png" alt="">
+			</section>
+			<section>
+				<h2>Fonte e Processamento de Dados</h2>
+				<ul class="font-middle">
+					<li>Sistema de Informação Geográfica (SIG)</li>
+					<li>IBGE</li>
+					<li>Censo demográfico de 2010</li>
+					<li>Inep</li>
+					<ul>
+						<li>Censos Escolares</li>
+						<li>Prova Brasil (ANEB/SAEB)</li>
+						<li>Exame Nacional do Ensino Médio (Enem)</li>
+					</ul>
+				</ul>
+			</section>
+			<section>
+				<h1>Ambiente de Produção</h1>
+				<ul class="font-middle">
+					<li><b>InterNuvem USP</b></li>
+					<ul>
+						<li>Compartilhado com DataCEM, Fórum e o WikiDados</li>
+					</ul>
+					<li><b>Configuração do Servidor</b></li>
+					<ul>
+						<li>Sistema operacional Linux (distribuição Ubuntu 16.04 de 64 bit)</li>
+						<li>Disco I de sistema de 8GB</li>
+						<li>2 Discos de armazenamento, de 92 GB e outro de 200 GB</li>
+						<li>Espaço não utilizado reservado para reconfiguração dos discos I, II, III de 50GB</li>
+						<li>8 vCPU de 2.3Ghz,</li>
+						<li>Memória de 32GB RAM</li>
+						<li>Ip pública: ​200.144.244.241</li>
+					</ul>
+					<li><b>Softwares</b></li>
+					<ul>
+						<li>MongoDB 3.4.9</li>
+						<li>NodeJS 7.10.1</li>
+						<li> 4.2.0</li>
+					</ul>
+				</ul>
+			</section>
+			<!-- Infográficos / GeoCEM+ -->
+			<section>
+				<h2>Infográficos / GeoCEM+</h2>
+				<div class="flex-container">
+					<div>
+						<img src="midia/apresentacao-cem-interscity/infograficos/infograficos_fundeb.gif" alt="">
+					</div>
+					<div>
+						<h2 class="kaue-header">Infográficos</h2>
+						<p class="kaue-p font-low">
+							Conjunto de visualizações de dados interativas produzidos a partir das pesquisas e bases de
+							dados desenvolvidas pelo CEM <br><br>
+							<b>Indicadores de Educação na Capital de São Paulo</b><br>
+							<a href="https://centrodametropole.fflch.usp.br/pt-br/indicadores-educacao" target="_blank">
+								https://centrodametropole.fflch.usp.br/pt-br/indicadores-educacao
+							</a>
+
+							<b>Financiamento da Educação Pública</b><br>
+							<a href="https://centrodametropole.fflch.usp.br/pt-br/node/10348" target="_blank">
+								https://centrodametropole.fflch.usp.br/pt-br/node/10348
+							</a>
+						</p>
+
+						<h2 class="kaue-header" style="margin-top: 10px;">GeoCEM+</h2>
+						<p class="kaue-p font-low">Plataforma web <b>integrada</b>
+						<ul class="font-low" style="text-align: left;">
+							<li><b>Criar infográficos</b> online e simplificada</li>
+							<li><b>Exportar</b> como imagem, PDF e código embed</li>
+						</ul>
+						</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h1>Motivação</h1>
+				<ul>
+					<li>Atuar como <b style="color: #1a9988;">mediador</b> para a transferência de tecnologia e difusão
+						do conhecimento</li>
+					<li>Aumentar a <b style="color: #1a9988;">visibilidade</b> das pesquisas e bases de dados</li>
+					<li>Tornar <b style="color: #1a9988;">acessível</b> e <b style="color: #1a9988;">simplificado</b> a
+						criação de visualizações de dados</li>
+					<li>Ampliar o uso das bases de dados nas dimensões <b style="color: #eb5600;">exploratórias</b> e <b
+							style="color: #eb5600;">analíticas</b></li>
+					<li>Diminuir a <b style="color: #eb5600;">complexidade</b> de manutenção de software</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Abordagem de desenvolvimento</h2>
+				<ul class="font-middle">
+					<li>Software livre</li>
+					<li>Desenvolvimento Interativo e Incremental</li>
+					<li>Integração e Entrega Contínua <span style="font-size: 0.5em">(continuous integration/continuous
+							delivery)</span></li>
+				</ul>
+				<div>
+					<img height="450px" src="midia/apresentacao-cem-interscity/infograficos/ciclo_desenv.png" alt="">
+				</div>
+			</section>
+			<section>
+				<h2>Metodologia de Desenvolvimento</h2>
+				<div>
+					<img width="700" src="midia/apresentacao-cem-interscity/infograficos/stories_painel.png" alt="">
+				</div>
+			</section>
+			<section>
+				<h2>Agile, User Stories, Épicos e Iniciativas</h2>
+				<div>
+					<img width="900" src="midia/apresentacao-cem-interscity/infograficos/stories_painel_zoom.png"
+						alt="">
+				</div>
+			</section>
+			<section>
+				<h2>Users Stories</h2>
+				<div>
+					<img src="midia/apresentacao-cem-interscity/infograficos/stories.png" alt="">
+				</div>
+			</section>
+			<section>
+				<h2>Arquitetura</h2>
+				<div>
+					<img height="580" src="midia/apresentacao-cem-interscity/infograficos/arquitetura.png" alt="">
+				</div>
+			</section>
+			<section>
+				<h2>Especificação GeoCEM+</h2>
+				<div>
+					<img src="midia/apresentacao-cem-interscity/infograficos/dia_sequencia.png" alt="">
+				</div>
+			</section>
+			<section>
+				<h2>Stack Tecnológico</h2>
+				<div>
+					<img src="midia/apresentacao-cem-interscity/infograficos/stack.png" alt="">
+				</div>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
