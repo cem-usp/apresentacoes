@@ -26,7 +26,7 @@
 					</p>
 			  </section>
 			  <section>
-			    <h2>GeoCEM</h2>
+			    <h3>GeoCEM</h3>
 			    <img src="midia/apresentacao-cem-interscity/mot.png" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
 					<ul>
 					  <li><span class="fragment highlight-red">Serviços</span>: WFS,WMS, WCS, WMTS, WPS</li>		
@@ -36,14 +36,16 @@
 </li>
 					</ul>
 			  </section>
-			  <section>			    
+			  <section>
+			    <h3>Detalhes técnicos:</br> Arquitetura GeoCEM</h3>
+
 			      <div id="left">
-			      <img src="midia/apresentacao-cem-interscity/gn_architecture.png" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;">
+			      <img src="midia/apresentacao-cem-interscity/gn_architecture.png" style="margin: 0 auto 4rem auto; background: transparent;">
 			      <!-- more Elements -->
 			      </div>
 
 			    <div id="right">
-			      <ul>
+			      <ul class = "r-fit-text">
 					  <li>Serviços: WFS,WMS, WCS, WMTS, WPS</li>		
 					  <li>Casos de uso</li>
 					  <li>Sistema web baseado no arcabouço do Geonode.</li>	  
@@ -70,8 +72,8 @@
 					</ul>
 			  </section>
 			  <section>
-			    <h2> Detalhes técnicos: Configuração GeoCEM [.env] </h2>
-			    <p>O arquivo de configuração .env permite alterar parâmetros dos programas instalados como postgres, geoserver, java, jenkins, nginx, controle de acesso, cliente Gis, monitoramento.
+			    <h4> Detalhes técnicos:</br> Configuração GeoCEM [.env] </h4>
+			    <p class = "r-fit-text">O arquivo de configuração .env permite alterar parâmetros dos programas instalados como postgres, geoserver, java, jenkins, nginx, controle de acesso, cliente Gis, monitoramento.
 			    </p>
 			    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 			    SITEURL=http://200.144.244.238/
@@ -111,19 +113,159 @@
 			    GEOSERVER_PUBLIC_LOCATION=http://200.144.244.238/geoserver/
 			    GEOSERVER_LOCATION=http://geoserver:8080/geoserver/
 			    GEOSERVER_ADMIN_USER=admin
-
 		            </code>
 			    </pre>
 			  </section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
+			  <section>
+			    <h3>Diagrama de sequência: </h3>
+                            <h4>Registrar base cartográfica</h4>
+			    </br>
+			    <img src="midia/apresentacao-cem-interscity/GeoCEM_criar_camada.png" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;">
+			  </section>
+			  
+			  <section>
+			    <h4> Usuário CEM</h4>
+			    <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/login.png" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;">
+			    </div>
+			    <div id="right">
+			    <ul >
+					  <li>Acesso para ingressar no sistema como utilizador do CEM:</li>
+					  <ol><li>Abrir opção de Login</li>
+					    <li>Conta de usuario</li>
+					    <li>Senha.</li>				    
+					  </ol>					
+			    </ul>
+			    </div>
+			     </section>
+			    <section>
+			      <h4> Usuário CEM</h4>
+			      <p>Painel com várias opções para um utilizador do CEM
+			      :</p>
+			      </br>
+			    <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/admin_django_gs.png" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;">
+			    </div>
+			    <div id="right">
+			    <ul >					 
+					  <ol><li>Administrador do Django</li>
+					    <li>Administrador do Geoserver</li>		    
+					  </ol>					
+			    </ul>
+			    </div>
+			    </section>
+			    <section>
+			      <h4> Usuário CEM</h4>
+			      <p>Opções adicionais
+			      :</p>
+			      </br>
+			    <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/optionadmin.png" style=" margin: 0 auto 4rem auto; background: transparent;">
+			    </div>
+			    <div id="right">
+			    <ul >					 
+					  <ol><li>Carregar uma camada de mapa</li>
+					    <li>Carregar documentos</li>
+					    <li>Criar mapa a partir de camadas de mapas</li>
+					  </ol>					
+			    </ul>
+			    </div>
+			    </section>
+			    <section>
+			      <section >
+				<h4 > Usuário CEM</h4>				     
+				<img src="midia/apresentacao-cem-interscity/uploadlayer.png" style=" height=180pn;margin: 0 auto 4rem auto; background: transparent;">
+				
+				<ul class = "r-fit-text">					 
+				  <ol><li>Escolher os arquivos em formato .zip ou os 4 arquivos com essas extensões .shp, .prj, .dbf, .shx </li>
+				    <li>Escolher o tipo de caracteres para a base cartográfica.</li>
+				    <li>Criar a camada de mapa.</li>
+				    <li>Editar metadados.</li>
+				  </ol>					
+				</ul>
+				
+			      </section>
+			      <section>
+				<h4> Usuário CEM</h4>				     
+				<img src="midia/apresentacao-cem-interscity/uploadlayer2.png" style=" margin: 0 auto 4rem auto; background: transparent;">	 
+				
+			      </section>
+			    </section>
+			    <section>
+				<h4>Usuário</h4>				     
+				<img src="midia/apresentacao-cem-interscity/advanced_search.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">	 
+								 
+				  <ol><li>Temas das bases cartográficas
+</li>
+				    <li>Resumo das bases cartográficas
+</li>				  
+				  </ol>					
+			
+			    </section>
+			    <section>
+			    <section>
+			    <h3>Diagrama de sequência: </h3>
+                            <h4>Criar mapa a partir de camada</h4>
+			    </br>
+			    <img src="midia/apresentacao-cem-interscity/GeoCEM_criar_mapa.png" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;">
+			    </section>
+			     <section>
+			       <h4>Usuário CEM</h4>
+			       <h4>Criar mapa</h4>
+				<img src="midia/apresentacao-cem-interscity/advanced_search.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">	 
+								 
+				  <ol><li>Selecionar camada.
+
+</li>
+				    <li>Criar mapa
+</li>				  
+				  </ol>								
+			     </section>
+			     <section>
+			       <h4>Usuário</h4>
+				<img src="midia/apresentacao-cem-interscity/mapa.svg" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+			    </section>
+			    </section>
+			      <section>
+			       <h4><p>Front-end [Página inicial]:</br> Estrutura</p></h4>
+				<img src="midia/apresentacao-cem-interscity/home.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+			      </section>
+			       <section>
+			       <h4>Front-end [Busca avançada]:</br> Estrutura</h4>
+				<img src="midia/apresentacao-cem-interscity/page-adv.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+			       </section>
+			       <section>
+				 <h4>Trabalhos Futuros</h4>
+				  <ul>
+					  <li>Criar mapas a partir da junção das bases cartográficas disponíveis.
+</li>		
+					  <li>GeoCEM + CKAN
+</li>
+					</ul>
+			       </section>
+			       <section>
+			       <h4>Detalhe técnico do servidor requerido:</h4>
+				  <ul>
+				    <li>Novo servidor Conta 1 internuvem.</li>
+				    <ul>
+					  <li>HD: 500GB
+					  </li>
+					  <li>8 CPU </li>
+					  <li>16 RAM</li>
+				    </ul>
+				   </ul>
+			       </section>
+			
+			    
+				<!-- <section data-background="midia/apresentacao-cem-interscity/GeoCEM_criar_mapa.png" data-background-size="1000px">Slide 2 -->
+				<!-- 		<aside class="notes"> -->
+				<!-- 		<p>Some notes</p> -->
+				<!-- 		</aside> -->
+				<!-- 		<p>Some slide text</p> -->
+				<!-- 		<aside class="notes"> -->
+				<!-- 		<p>and some more notes</p> -->
+				<!-- 	</aside> -->
+				<!-- </section> -->
 			</div>
 		</div>
 
