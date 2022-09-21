@@ -17,14 +17,44 @@
 		<div class="reveal">
 		  <div class="slides">
 		    <a href="https://centrodametropole.fflch.usp.br/">
-						<img src="midia/apresentacao-cem-interscity/logo_cem-hd.jpg" alt="reveal.js logo" style="height: 80px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
-					</a>
+		    				<img src="midia/apresentacao-cem-interscity/logo_cem-hd.jpg" alt="reveal.js logo" style="float:right;">
+		    			</a>
 			  <section><p>SISTEMA DE GESTÃO E PUBLICAÇÃO DE BASES CARTOGRÁFICAS</p>
 			    <p>GEOCEM</p>
 			    <p>
 						<small><a href="https://centrodametropole.fflch.usp.br/">https://centrodametropole.fflch.usp.br/</a></small>
 					</p>
 			  </section>
+			  <section>
+			    <h2>GeoCEM</h2>
+			    <img src="midia/apresentacao-cem-interscity/mot.png" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
+					<ul>
+					  <li><span class="fragment highlight-red">Serviços</span>: WFS,WMS, WCS, WMTS, WPS</li>		
+					  <li>Casos de uso</li>
+					  <li>Sistema web baseado no arcabouço do Geonode.</li>	  
+					  <li>Visualizar as bases cartográficas com seus metadados e dicionários.
+</li>
+					</ul>
+			  </section>
+			  <section>			    
+			      <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/gn_architecture.png" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;">
+			      <!-- more Elements -->
+			      </div>
+
+			    <div id="right">
+			      <ul>
+					  <li>Serviços: WFS,WMS, WCS, WMTS, WPS</li>		
+					  <li>Casos de uso</li>
+					  <li>Sistema web baseado no arcabouço do Geonode.</li>	  
+					  <li>Visualizar as bases cartográficas com seus metadados e dicionários.
+</li>
+					</ul>
+			      <!-- more Elements -->
+			    </div>
+			  
+			  </section>
+
 			  <section>
 			    <h2>Índice</h2>
 					<ul>
@@ -43,7 +73,7 @@
 			    <h2> Detalhes técnicos: Configuração GeoCEM [.env] </h2>
 			    <p>O arquivo de configuração .env permite alterar parâmetros dos programas instalados como postgres, geoserver, java, jenkins, nginx, controle de acesso, cliente Gis, monitoramento.
 			    </p>
-			    <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+			    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 			    SITEURL=http://200.144.244.238/
 			    ALLOWED_HOSTS=[‘django’,]
 
