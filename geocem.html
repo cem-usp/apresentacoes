@@ -19,9 +19,10 @@
 		    <a href="https://centrodametropole.fflch.usp.br/">
 		    				<img src="midia/apresentacao-cem-interscity/geocem/logo_cem-hd.jpg" alt="reveal.js logo" style="float:right;">
 		    			</a>
-			  <section><p>SISTEMA DE GESTÃO E PUBLICAÇÃO DE BASES CARTOGRÁFICAS</p>
-			    <p>GEOCEM</p>
-			    <p>
+		    <section><p><b>SISTEMA DE GESTÃO E PUBLICAÇÃO DE BASES CARTOGRÁFICAS</b></p>
+		      </br>
+			    <p><b>GEOCEM</b></p>			    
+			    <p></br></br>
 						<small><a href="https://centrodametropole.fflch.usp.br/">https://centrodametropole.fflch.usp.br/</a></small>
 					</p>
 			  </section>
@@ -29,35 +30,13 @@
 			    <h3>GeoCEM</h3>
 			    <img src="midia/apresentacao-cem-interscity/geocem/mot.png" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;">
 					<ul>
-					  <li><span class="fragment highlight-red">Serviços</span>: WFS,WMS, WCS, WMTS, WPS</li>		
-					  <li>Casos de uso</li>
-					  <li>Sistema web baseado no arcabouço do Geonode.</li>	  
-					  <li>Visualizar as bases cartográficas com seus metadados e dicionários.
+					  <li><b style="color: #7e0834">Serviços</b>: WFS,WMS, WCS, WMTS, WPS</li>		
+					  <li>Sistema web baseado no arcabouço do <b style="color: #7e0834">Geonode</b>.</li>	  
+					  <li><b style="color: #7e0834">Visualizar</b> as bases cartográficas com seus metadados e dicionários.
 </li>
 					</ul>
 			  </section>
-			  <section>
-			    <h3>Detalhes técnicos:</br> Arquitetura GeoCEM</h3>
-
-			      <div id="left">
-			      <img src="midia/apresentacao-cem-interscity/geocem/gn_architecture.png" style="margin: 0 auto 4rem auto; background: transparent;">
-			      <!-- more Elements -->
-			      </div>
-
-			    <div id="right">
-			      <ul class = "r-fit-text">
-					  <li>Serviços: WFS,WMS, WCS, WMTS, WPS</li>		
-					  <li>Casos de uso</li>
-					  <li>Sistema web baseado no arcabouço do Geonode.</li>	  
-					  <li>Visualizar as bases cartográficas com seus metadados e dicionários.
-</li>
-					</ul>
-			      <!-- more Elements -->
-			    </div>
-			  
-			  </section>
-
-			  <section>
+			   <section>
 			    <h2>Índice</h2>
 					<ul>
 					  <li>Acerca do GeoCEM</li>
@@ -71,6 +50,26 @@
 						<li>Trabalhos futuros</li>
 					</ul>
 			  </section>
+			  <section>
+			    <h3>Detalhes técnicos:</br> Arquitetura GeoCEM</h3>
+
+			      <div id="left">
+			      <img src="midia/apresentacao-cem-interscity/geocem/gn_architecture.png" style="margin: 0 auto 4rem auto; background: transparent;">
+			      <!-- more Elements -->
+			      </div>
+
+			    <div id="right">
+			      <ul class = "r-fit-text">
+					  <li>O sistema está em contenedores <b style="color: #7e0834">Docker</b> o que facilita a instalação e portabilidade.</li>		
+					  <li>O <b style="color: #7e0834">Geoserver</b> permite fazer o fluxo de dados mais eficiente utilizando o Cache.</li>
+					  <li>O arcabouço <b style="color: #7e0834">Djando</b> para criar temas cartográficos e configuração do frontend.</li>
+					</ul>
+			      <!-- more Elements -->
+			    </div>
+			  
+			  </section>
+
+			 
 			  <section>
 			    <h4> Detalhes técnicos:</br> Configuração GeoCEM [.env] </h4>
 			    <p class = "r-fit-text">O arquivo de configuração .env permite alterar parâmetros dos programas instalados como postgres, geoserver, java, jenkins, nginx, controle de acesso, cliente Gis, monitoramento.
@@ -160,7 +159,7 @@
 			      :</p>
 			      </br>
 			    <div id="left">
-			      <img src="midia/apresentacao-cem-interscity/geocem/optionadmin.png" style=" margin: 0 auto 4rem auto; background: transparent;">
+			      <img src="midia/apresentacao-cem-interscity/geocem/optionadmin.png" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;">
 			    </div>
 			    <div id="right">
 			    <ul >					 
@@ -174,7 +173,7 @@
 			    <section>
 			      <section >
 				<h4 > Usuário CEM</h4>				     
-				<img src="midia/apresentacao-cem-interscity/geocem/uploadlayer.png" style=" height=180pn;margin: 0 auto 4rem auto; background: transparent;">
+				<img src="midia/apresentacao-cem-interscity/geocem/uploadlayer.png" style="height: 380px; margin: 0 auto 4rem auto; background: transparent;">
 				
 				<ul class = "r-fit-text">					 
 				  <ol><li>Escolher os arquivos em formato .zip ou os 4 arquivos com essas extensões .shp, .prj, .dbf, .shx </li>
@@ -205,13 +204,12 @@
 			    <section>
 			    <section>
 			    <h3>Diagrama de sequência: </h3>
-                            <h4>Criar mapa a partir de camada</h4>
+                            <h4>Criar mapa a partir de camadas</h4>
 			    </br>
 			    <img src="midia/apresentacao-cem-interscity/geocem/GeoCEM_criar_mapa.png" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;">
 			    </section>
 			     <section>
-			       <h4>Usuário CEM</h4>
-			       <h4>Criar mapa</h4>
+			       <h4>Usuário CEM: Criar mapa</h4>
 				<img src="midia/apresentacao-cem-interscity/geocem/advanced_search.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">	 
 								 
 				  <ol><li>Selecionar camada.
@@ -228,11 +226,11 @@
 			    </section>
 			      <section>
 			       <h4><p>Front-end [Página inicial]:</br> Estrutura</p></h4>
-				<img src="midia/apresentacao-cem-interscity/geocem/home.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+				<img src="midia/apresentacao-cem-interscity/geocem/home.png" style="margin: 0 auto 4rem auto; background: transparent;">					
 			      </section>
 			       <section>
 			       <h4>Front-end [Busca avançada]:</br> Estrutura</h4>
-				<img src="midia/apresentacao-cem-interscity/geocem/page-adv.png" style="height:380px; margin: 0 auto 4rem auto; background: transparent;">					
+				<img src="midia/apresentacao-cem-interscity/geocem/page-adv.png" style="margin: 0 auto 4rem auto; background: transparent;">					
 			       </section>
 			       <section>
 				 <h4>Trabalhos Futuros</h4>
